@@ -11,7 +11,7 @@ const Tasks = lazy(() => import('./pages/Tasks'));
 export default function App() {
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename="/React-Capstone/">
         <div className="min-h-screen relative z-10 transition-colors duration-300">
           <nav className="p-4 flex justify-between items-center border-b" style={{ borderColor: 'var(--text-color)' }}>
             <Link to="/" className="font-bold text-xl tracking-wider">
