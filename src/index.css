@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme Variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111827;
+  --primary-color: #3b82f6;
+}
+
+.theme-sunset {
+  --bg-color: #ffedd5; /* orange-100 */
+  --text-color: #7c2d12; /* orange-900 */
+  --primary-color: #ea580c; /* orange-600 */
+}
+
+.theme-hacker {
+  --bg-color: #000000;
+  --text-color: #4ade80; /* green-400 */
+  --primary-color: #22c55e; /* green-500 */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Hacker Mode Animations */
+@keyframes floatUp {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+
+.hacker-icon {
+  position: fixed;
+  color: #16a34a; /* green-600 */
+  opacity: 0.2;
+  animation: floatUp linear infinite;
+  z-index: -1;
+}
