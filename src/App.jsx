@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import ThemeToggle from './components/ThemeToggle';
 import { Loader } from 'lucide-react';
@@ -11,7 +11,7 @@ const Tasks = lazy(() => import('./pages/Tasks'));
 export default function App() {
   return (
     <ThemeProvider>
-      <Router basename="/React-Capstone/">
+      <Router>
         <div className="min-h-screen relative z-10 transition-colors duration-300">
           <nav className="p-4 flex justify-between items-center border-b" style={{ borderColor: 'var(--text-color)' }}>
             <Link to="/" className="font-bold text-xl tracking-wider">
